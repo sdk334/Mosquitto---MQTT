@@ -31,9 +31,38 @@ Crear `/etc/mosquitto/conf.d/external.conf`:
 listener 1883
 allow_anonymous true
 
+
+## Configuración del Publisher (ESP32)
  
-## Publisher (ESP32)
+### 1. Instalar el soporte para ESP32 en Arduino IDE
  
+En **Archivo → Preferencias**, agregar la siguiente URL en *Gestor de URLs adicionales de tarjetas*:
+ 
+```
+https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
+```
+ 
+Luego en **Herramientas → Placa → Gestor de tarjetas**, buscar `esp32` e instalar el paquete de **Espressif Systems**.
+ 
+### 2. Instalar la librería PubSubClient
+ 
+En **Herramientas → Administrar bibliotecas**, buscar `PubSubClient` de **Nick O'Leary** e instalarla.
+ 
+### 3. Configurar credenciales
+ 
+Antes de compilar, editar las siguientes variables en `src/main.cpp`:
+ 
+```cpp
+const char* ssid     = "NOMBRE_RED";
+const char* password = "CONTRASEÑA";
+const char* mqtt_server = "192.168.X.X"; // IP de la Raspberry Pi
+```
+ 
+### 4. Seleccionar la placa y cargar
+ 
+En **Herramientas → Placa** seleccionar `ESP32 Dev Module`, elegir el puerto COM correspondiente y cargar el sketch.
+ 
+
 El código en `src/` se conecta al WiFi local, establece conexión con el broker usando su IP estática y publica cada 10 segundos:
  
 | Tópico | Payload |
