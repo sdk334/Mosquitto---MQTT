@@ -1,6 +1,10 @@
 # Mosquitto MQTT — Raspberry Pi + ESP32
+Materia: INTERNET DE LAS COSAS|EMBEDDED SYSTEMS
+Alumno:	JONATHAN URIEL PAREDES MARTINEZ
+grupo: 6CM3
  
 ![MQTT](https://img.shields.io/badge/Protocol-MQTT-blue) ![Mosquitto](https://img.shields.io/badge/Broker-Mosquitto-orange) ![ESP32](https://img.shields.io/badge/Hardware-ESP32-green) ![Raspberry Pi](https://img.shields.io/badge/Hardware-Raspberry%20Pi-red)
+
  
 Broker MQTT sobre Raspberry Pi con ESP32 como nodo publicador de temperatura y humedad.
  
