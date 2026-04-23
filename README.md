@@ -50,7 +50,7 @@ En **Herramientas → Administrar bibliotecas**, buscar `PubSubClient` de **Nick
  
 ### 3. Configurar credenciales
  
-Antes de compilar, editar las siguientes variables en `src/main.cpp`:
+Antes de compilar, editar las siguientes variables en `Codigo_ESP32.ino`:
  
 ```cpp
 const char* ssid     = "NOMBRE_RED";
@@ -63,7 +63,7 @@ const char* mqtt_server = "192.168.X.X"; // IP de la Raspberry Pi
 En **Herramientas → Placa** seleccionar `ESP32 Dev Module`, elegir el puerto COM correspondiente y cargar el sketch.
  
 
-El código en `src/` se conecta al WiFi local, establece conexión con el broker usando su IP estática y publica cada 10 segundos:
+El código en `Codigo_ESP32.ino` se conecta al WiFi local, establece conexión con el broker usando su IP estática y publica cada 10 segundos:
  
 | Tópico | Payload |
 |--------|---------|
